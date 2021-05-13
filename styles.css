@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #D80484;
+  --primary-dark: #c20376;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav-active {
+  color: var(--primary);
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.heading {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.heading > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading > div > h1 {
+  font-size: 3rem;
+}
+
+.heading > div > img {
+  width: 7.5%;
+}
+
+.heading > p {
+  margin-top: 1rem;
+}
+
+nav a{
+  text-decoration: none;
+  color: #333;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #333;
+}
+
+nav > ul > li {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+nav > ul > li > a:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+nav >ul > li > a:hover > ul > li {
+  color: #333;
+}
+
+nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  z-index: 9999;
+  padding-top: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav > ul > li > ul > li {
+  list-style: none;
+  padding: 1rem;
+}
+
+nav > ul > li > ul > li a:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.catalog-nav:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.catalog-nav:hover > ul {
+  display: block;
+}
+
+
+/* Main */
+h2 {
+  font-size: 1.2rem;
+}
+
+.best-sellers-section {
+  margin-top: 3rem !important;
+}
+
+.best-sellers-section > h2 {
+  margin-bottom: 1rem;
+}
+
+.best-seller-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+#left-arrow, #right-arrow {
+  position: absolute;
+  top: 45%;
+  width: 4rem;
+  height: 3rem;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left-arrow {
+  left: 0;
+  z-index: 999;
+}
+
+#right-arrow {
+  right: 0;
+  z-index: 999;
+}
+
+.best-seller-image-container  {
+  display: flex;
+  position: relative;
+  /* overflow: visible; */
+  box-sizing: border-box;
+}
+
+.best-seller-image {
+  min-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.best-seller-image > img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.product-and-testimony-section {
+  margin-top: 3rem;
+}
+
+.product-and-testimony-section > h2 {
+  margin-bottom: 1rem;
+}
+
+.home-product{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.home-product-card {
+  height: 15rem;
+  position: relative;
+  transition: background-size 0.5s ease-in;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-product-card:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.home-product-card > h3 {
+  color: #FFF;
+  position: absolute;
+  z-index: 99;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.home-product-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(216, 4, 132, 0.25); */
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 9;
+  border-radius: 0.5rem;
+}
+
+.home-product-merchandise {
+  background-image: url("assets/merchandise.jpg");
+}
+
+.home-product-album {
+  background-image: url("assets/album.jpg");
+}
+
+.home-testimony-card {
+  margin-top: 1rem;
+  position: relative;
+  background-image: url("assets/testimonial.jpg");
+  height: 10rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.home-testimony-card:hover h3{
+  font-size: 1.5rem;
+}
+
+.home-testimony-card > h3 {
+  color: #fff;
+  z-index: 999;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.about-us-section {
+  margin-top: 3rem;
+}
+
+.about-us-section > div {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-section > div > img {
+  width: 20%;
+}
+
+.about-us-section > h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.about-us-section  p {
+  margin-top: 1rem !important;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-section > p > b {
+  color: var(--primary);
+}
+
+/* Albums */
+
+.album-section {
+  margin-top: 3rem;
+}
+
+.album-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.album-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.album-card {
+  border: 1px solid #E5E5E5;
+}
+
+.album-card h3 {
+  font-size: 1rem;
+}
+
+.album-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 15rem;
+}
+
+.album-card > div {
+  padding: 0.5rem 0.75rem;
+}
+
+.album-card > div > span {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Merchandise */
+.merchandise-section {
+  margin-top: 3rem;
+}
+
+.merchandise-section h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.merchandise-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.merchandise-card {
+  border: 1px solid #E5E5E5;
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+}
+
+.merchandise-card h3 {
+  font-size: 1rem;
+}
+
+.merchandise-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 15rem;
+}
+
+.merchandise-card > div > span {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Testimonials */
+.testimony-section {
+  margin-top: 3rem;
+}
+
+.testimony-section h2 {
+  margin-bottom: 1rem;
+}
+
+.testimony-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.testimony-card {
+  border: 1px solid #E5E5E5;
+  padding: 1.5rem 2rem;
+  position: relative;
+  border-radius: 0.3rem;
+}
+
+.testimony-card > p {
+  margin-bottom: 4rem;
+}
+
+.testimony-card-quote {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.testimony-card-user {
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 2rem;
+  font-weight: 600;
+}
+
+.testimony-card-user > span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+/* Register */
+.register-section {
+  margin-top: 3rem;
+}
+
+.register-section h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  border: 1px solid #E5E5E5;
+  padding: 1.25rem;
+  border-radius: 0.4rem;
+}
+
+form label {
+  display: block;
+}
+
+form .form-group input[type="text"],
+form .form-group input[type="password"],
+form .form-group input[type="number"]{
+  width: 100%;
+  border: 1px solid #E5E5E5;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+form .form-group {
+  margin-top: 1rem;
+}
+
+form .form-checkbox {
+  margin-top: 1rem;
+}
+
+form .form-checkbox label{
+  display: inline;
+}
+
+form .form-button {
+  margin-top: 2rem;
+}
+
+form .form-button button{
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3rem;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form .form-button button:hover {
+  background-color: var(--primary-dark);
+}
+
+footer {
+  border-top: 1px solid #333;
+  margin-top: 2rem !important;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.error-message {
+  display: block;
+  color: red;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .best-seller-image > img {
+    height: 35rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .heading > div > img {
+    width: 12.5%;
+  }
+  
+  .best-seller-image > img {
+    height: 25rem;
+  }
+
+  .album-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .merchandise-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-us-section > div > img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav > ul {
+    flex-direction: column;
+    /* text-align: center; */
+  }
+
+  .heading > div > img {
+    width: 25%;
+  }
+
+  .heading > div > h1 {
+    font-size: 2rem;
+  }
+
+  .album-card img {
+    height: 17.5rem;
+  }
+
+  .best-seller-image > img {
+    height: 17.5rem;
+  }
+
+  .album-container,
+  .testimony-container {
+    grid-template-columns: 1fr;
+  }
+
+  .merchandise-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-us-section > div > img {
+    width: 50%;
+  }
+  
+  .about-us-section p {
+    width: 100%;
+  }
+}
